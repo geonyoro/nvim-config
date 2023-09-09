@@ -117,23 +117,6 @@ require("lazy").setup({
       })
     end,
   },
-  --- for golang
-  {
-    "ray-x/go.nvim",
-    dependencies = { -- optional packages
-      "ray-x/guihua.lua",
-      "neovim/nvim-lspconfig",
-      "nvim-treesitter/nvim-treesitter",
-    },
-    config = function()
-      require("go").setup({
-        tabstop = 4,
-      })
-    end,
-    event = { "CmdlineEnter" },
-    ft = { "go", "gomod" },
-    build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
-  },
 
   -- Git related plugins
   {
@@ -150,6 +133,7 @@ require("lazy").setup({
 
   -- Detect tabstop and shiftwidth automatically
   "tpope/vim-sleuth",
+
   {
     "mbbill/undotree",
     config = function()
@@ -473,6 +457,7 @@ require("nvim-treesitter.configs").setup({
   -- Add languages to be installed here that you want installed for treesitter
   ensure_installed = {
     "bash",
+    "go",
     "http",
     "lua",
     "java",
@@ -606,7 +591,7 @@ end
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
   -- clangd = {},
-  -- gopls = {},
+  gopls = {},
   pyright = {},
   rust_analyzer = {},
   tsserver = {},
