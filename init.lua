@@ -80,18 +80,16 @@ require("lazy").setup({
       })
     end,
   },
+  "wakatime/vim-wakatime",
   { "alaviss/nim.nvim" },
-
   { "mattn/emmet-vim" },
   {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
-
   {
     "Asheq/close-buffers.vim",
   },
-
   {
     "akinsho/toggleterm.nvim",
     version = "*",
