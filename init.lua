@@ -81,6 +81,9 @@ require("lazy").setup({
     end,
   },
   "wakatime/vim-wakatime",
+  "nanotee/sqls.nvim",
+  { "neoclide/coc.nvim", branch = "release" },
+  -- "mfussenegger/nvim-jdtls",
   { "alaviss/nim.nvim" },
   { "mattn/emmet-vim" },
   {
